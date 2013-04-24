@@ -51,7 +51,6 @@ INSTALLED_APPS = (
     'wheelcms_axle',
     'wheelcms_spokes',
     'wheelcms_categories',
-    'wheelcms_valve',
 
     'taggit',
     'tinymce',
