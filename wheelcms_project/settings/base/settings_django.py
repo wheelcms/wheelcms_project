@@ -47,8 +47,7 @@ INSTALLED_APPS = (
 
     'haystack',
 
-    'wheelsite_site',
-
+    'wheelcms_project',
     'wheelcms_axle',
     'wheelcms_spokes',
     'wheelcms_categories',
