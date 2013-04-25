@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.conf.urls.defaults import patterns, include
 
 from django.conf import settings
+from django.views.defaults import page_not_found
 
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -11,6 +12,11 @@ admin.autodiscover()
 urlpatterns = staticfiles_urlpatterns()
 
 ## or import static_urls; urlpatterns = static_urls.urlpatterns
+
+if not settings.ALLOW_SIGNUP:
+    urlpatterns += patterns('',
+        ('^accounts/signup', page_not_found),
+    )
 
 urlpatterns += patterns('',
     (r'^admin/', include(admin.site.urls)),
