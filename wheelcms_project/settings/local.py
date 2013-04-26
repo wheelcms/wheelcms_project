@@ -25,6 +25,8 @@ DATABASES = {
     'default': SQLITE_DEFAULT_DB,
 }
 
+## avoid SMTP madness during development
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # INSTALLED_APPS += ('debug_toolbar', )
 # INTERNAL_IPS = ('127.0.0.1',)
