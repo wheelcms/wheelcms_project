@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.humanize',
 
+    'south',
     'haystack',
 
     'wheelcms_project',
