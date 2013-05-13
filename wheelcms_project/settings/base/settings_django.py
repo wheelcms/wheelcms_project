@@ -5,7 +5,11 @@ SITE_ID = 1
 
 from .util import get_env_variable
 
-SECRET_KEY = get_env_variable('SECRET_KEY')
+SECRET_KEY = get_env_variable('SECRET_KEY', None)
+if SECRET_KEY is None:
+    from logging import warning
+    warning("$SECRET_KEY not set, using fixed SECRET_KEY in stead. DO NOT USE THIS IN PRODUCTION SITES!")
+    SECRET_KEY="not-random-do-not-use-this-key-in-production"
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
