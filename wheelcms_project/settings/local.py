@@ -7,24 +7,6 @@ SITE_ID = 1
 
 DEBUG = True
 
-SQLITE_DEFAULT_DB = {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'wheel.db',
-}
-
-PG_DEFAULT_DB = {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'somename',
-        'USER': 'someone',  # get_env_variable ...
-        'PASSWORD': 'somesecret',  # get_env_variable ...
-        'HOST': 'localhost',
-        'PORT': '',
-}
-
-DATABASES = {
-    'default': SQLITE_DEFAULT_DB,
-}
-
 ## avoid SMTP madness during development
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
