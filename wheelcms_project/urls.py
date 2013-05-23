@@ -6,8 +6,10 @@ from django.views.defaults import page_not_found
 
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from wheelcms_axle.urls import handler500, handler404
 
 admin.autodiscover()
+
 
 urlpatterns = staticfiles_urlpatterns()
 
