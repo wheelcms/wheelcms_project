@@ -11,17 +11,19 @@ from wheelcms_axle.urls import handler500, handler404
 admin.autodiscover()
 
 
-urlpatterns = staticfiles_urlpatterns()
+basepatterns = staticfiles_urlpatterns()
 
 ## or import static_urls; urlpatterns = static_urls.urlpatterns
 
 if not settings.ALLOW_SIGNUP:
-    urlpatterns += patterns('',
+    basepatterns += patterns('',
         ('^accounts/signup', page_not_found),
     )
 
-urlpatterns += patterns('',
+basepatterns += patterns('',
     (r'^admin/', include(admin.site.urls)),
+)
+wheelpatterns = patterns('', 
     (r'^favicon.ico$', 'django.views.generic.simple.redirect_to',
                         {'url': '/static/images/favicon.ico'}),
     (r'^tinymce/', include('tinymce.urls')),
@@ -30,9 +32,11 @@ urlpatterns += patterns('',
     (r'', include('wheelcms_axle.urls')),
 )
 
+
 if settings.DEBUG:
-    urlpatterns += patterns('',
+    basepatterns += patterns('',
         (r'^media/(?P<path>.*)$', 'django.views.static.serve',
          {'document_root': settings.MEDIA_ROOT}),
     )
 
+urlpatterns = basepatterns + wheelpatterns
