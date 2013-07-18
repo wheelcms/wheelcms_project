@@ -71,3 +71,5 @@ INSTALLED_APPS = (
 
 )
 
+
+TESTING = False  ## assume we're not running a unit test, override explicitly
