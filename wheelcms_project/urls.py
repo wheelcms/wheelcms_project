@@ -8,6 +8,8 @@ from django.views.defaults import page_not_found
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from wheelcms_axle.urls import handler500, handler404
 
+from django.views.generic import RedirectView
+
 admin.autodiscover()
 
 
@@ -24,8 +26,7 @@ basepatterns += patterns('',
     (r'^admin/', include(admin.site.urls)),
 )
 wheelpatterns = patterns('', 
-    (r'^favicon.ico$', 'django.views.generic.simple.redirect_to',
-                        {'url': '/static/images/favicon.ico'}),
+    (r'^favicon.ico$', RedirectView.as_view(url='/static/images/favicon.ico')),
     (r'^tinymce/', include('tinymce.urls')),
     (r'^accounts/', include('userena.urls')),
     (r'^search/', include('haystack.urls')),
