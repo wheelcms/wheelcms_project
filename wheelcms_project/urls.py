@@ -12,27 +12,29 @@ from django.views.generic import RedirectView
 
 admin.autodiscover()
 
+## basepatterns are usually not localized,
+## wheelpatterns are.
 
 basepatterns = staticfiles_urlpatterns()
+wheelpatterns = patterns('')
 
 ## or import static_urls; urlpatterns = static_urls.urlpatterns
 
 if not settings.ALLOW_SIGNUP:
-    basepatterns += patterns('',
+    wheelpatterns += patterns('',
         ('^accounts/signup', page_not_found),
     )
 
 basepatterns += patterns('',
     (r'^admin/', include(admin.site.urls)),
-)
-wheelpatterns = patterns('', 
     (r'^favicon.ico$', RedirectView.as_view(url='/static/images/favicon.ico')),
     (r'^tinymce/', include('tinymce.urls')),
+)
+wheelpatterns += patterns('',
     (r'^accounts/', include('userena.urls')),
     (r'^search/', include('haystack.urls')),
     (r'', include('wheelcms_axle.urls')),
 )
-
 
 if settings.DEBUG:
     basepatterns += patterns('',
