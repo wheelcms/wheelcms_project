@@ -1,3 +1,5 @@
+from .util import get_env_variable
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -20,3 +22,11 @@ USE_I18N = True
 # calendars according to the current locale
 USE_L10N = True
 
+# Wheel translation support. This lives in its own set of configuration
+# options for now, which may mean some duplocation
+
+LANGUAGES = (('en', 'English'), ('nl', 'Nederlands'))
+CONTENT_LANGUAGES = LANGUAGES
+FALLBACK = 'en'
+FORCE_LANGUAGE = get_env_variable('FORCE_LANGUAGE', None)
+LANGUAGE_CODE = 'en'
