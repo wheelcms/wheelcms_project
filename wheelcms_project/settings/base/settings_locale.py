@@ -28,5 +28,13 @@ USE_L10N = True
 LANGUAGES = (('en', 'English'), ('nl', 'Nederlands'))
 CONTENT_LANGUAGES = LANGUAGES
 FALLBACK = 'en'
+
+## Force the site (content + interface) into a specific language?
 FORCE_LANGUAGE = get_env_variable('FORCE_LANGUAGE', None)
+
+## Default language if it cannot be determined otherwise
 LANGUAGE_CODE = 'en'
+
+## map languages to domains. If there are different domains per language,
+## these are used to construct the correct URL for the language switch
+LANGUAGE_DOMAINS = {}
