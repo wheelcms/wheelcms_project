@@ -1,13 +1,12 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0'
+version = '0.8'
 
 setup(name='wheelcms_project',
       version=version,
       description="WheelCMS project package",
-      long_description=open("README.md").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+      long_description=open("README.md").read(),
       classifiers=[
         "Programming Language :: Python",
         ],
