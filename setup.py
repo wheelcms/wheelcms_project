@@ -37,7 +37,7 @@ setup(name='wheelcms_project',
           'wheelcms_simplecontact',
           'wheelcms_theme_bootswatch',
           'django-userena',
-          'django-guardian'
+          'django-guardian',
           'django-tinymce',
           'django-taggit',
       ],
