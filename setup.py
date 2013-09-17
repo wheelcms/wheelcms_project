@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.8'
+version = '0.8.1'
 
 setup(name='wheelcms_project',
       version=version,
@@ -21,9 +21,25 @@ setup(name='wheelcms_project',
       zip_safe=False,
       install_requires=[
           'dj-database-url',
-          'wheelcms_axle',
           'setuptools',
           'pytest',
+          'two.ol',
+          'two.bootstrap',
+          'twotest',
+          'south',
+          'haystack==1.2.7',
+          'pysolr',
+          'Pillow',
+          'stracks_api',
+          'wheelcms_axle',
+          'wheelcms_spokes',
+          'wheelcms_categories',
+          'wheelcms_simplecontact',
+          'wheelcms_theme_bootswatch',
+          'django-userena',
+          'django-guardian'
+          'django-tinymce',
+          'django-taggit',
       ],
       entry_points={
       },

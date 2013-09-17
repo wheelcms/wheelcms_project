@@ -1,5 +1,5 @@
-from settings.base import *
-from settings.base.util import get_env_variable
+from wheelcms_project.settings.base import *
+from wheelcms_project.settings.base.util import get_env_variable
 
 if not DATABASE_URL:
     PG_DEFAULT_DB = {

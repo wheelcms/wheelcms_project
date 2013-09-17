@@ -1,4 +1,4 @@
-from settings.base import *
+from wheelcms_project.settings.base import *
 
 from .base.util import get_env_variable
 
