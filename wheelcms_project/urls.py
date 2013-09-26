@@ -31,7 +31,6 @@ basepatterns += patterns('',
     (r'^tinymce/', include('tinymce.urls')),
 )
 wheelpatterns += patterns('',
-    (r'^accounts/', include('userena.urls')),
     (r'^search/', include('haystack.urls')),
     (r'', include('wheelcms_axle.urls')),
 )
