@@ -68,7 +68,7 @@ INSTALLED_APPS = (
     'twotest',
 
     'userena',
-    'guardian'
+    'guardian',
     'easy_thumbnails',
 
 
