@@ -54,6 +54,8 @@ INSTALLED_APPS = (
     'south',
     'haystack',
 
+    'granules',
+
     'wheelcms_project',
     'wheelcms_theme_bootswatch',
     'wheelcms_axle',
