@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.conf.urls.defaults import patterns, include
+from django.conf.urls import patterns, include
 
 from django.conf import settings
 from django.views.defaults import page_not_found
