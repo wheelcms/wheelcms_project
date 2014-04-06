@@ -15,6 +15,6 @@ DATABASES = {
 TEST_MEDIA_ROOT = "/tmp/wheel-cms-test-media"
 CLEANUP_MEDIA = True
 
-HAYSTACK_SEARCH_ENGINE = "simple"
 
+HAYSTACK_CONNECTIONS={'default':{'engine':'haystack.backends.simple_backend.SimpleEngine'}}
 TESTING = True
