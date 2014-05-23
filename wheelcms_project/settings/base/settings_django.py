@@ -24,6 +24,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'wheelcms_axle.middleware.ToolbarMiddleware',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -34,7 +35,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
 
     "wheelcms_axle.context_processors.configuration",
-    "wheelcms_axle.context_processors.toolbar",
 )
 
 ROOT_URLCONF = 'urls'
