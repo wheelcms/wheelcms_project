@@ -71,7 +71,7 @@ INSTALLED_APPS = (
 
     'userena',
     'guardian',
-    'easy_thumbnails',
+#    'easy_thumbnails',
 
     'drole',
 
