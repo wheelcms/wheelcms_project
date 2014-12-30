@@ -40,6 +40,7 @@ setup(name='wheelcms_project',
           'django-guardian',
           'django-tinymce',
           'django-taggit',
+          'django_drole'
       ],
       entry_points={
       },
