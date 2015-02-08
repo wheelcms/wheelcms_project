@@ -41,6 +41,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 ROOT_URLCONF = 'urls'
 
 INSTALLED_APPS = (
+    'drole',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
