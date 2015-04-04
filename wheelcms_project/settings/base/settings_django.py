@@ -33,6 +33,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.core.context_processors.media',
     'django.core.context_processors.static',
+    'django.contrib.messages.context_processors.messages',
 
     "wheelcms_axle.context_processors.configuration",
 )
@@ -79,5 +80,14 @@ INSTALLED_APPS = (
 
 )
 
+from django.contrib.messages import constants as message_constants
+
+MESSAGE_TAGS = {
+    message_constants.DEBUG: 'debug',
+    message_constants.INFO: 'info',
+    message_constants.SUCCESS: 'success',
+    message_constants.WARNING: 'warning',
+    message_constants.ERROR: 'danger'
+}
 
 TESTING = False  ## assume we're not running a unit test, override explicitly
