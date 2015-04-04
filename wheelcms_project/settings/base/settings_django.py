@@ -67,7 +67,6 @@ INSTALLED_APPS = (
 
     'taggit',
     'tinymce',
-    'two.ol',
     'two.bootstrap',
     'twotest',
 
