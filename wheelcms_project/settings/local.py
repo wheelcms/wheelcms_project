@@ -14,15 +14,3 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # INTERNAL_IPS = ('127.0.0.1',)
 # MIDDLEWARE_CLASSES += \
 # ('debug_toolbar.middleware.DebugToolbarMiddleware', )
-# 
-
-STRACKS_URL = get_env_variable('STRACKS_URL', '')
-
-STRACKS_CONNECTOR = None
-
-if STRACKS_URL:
-    from stracks_api.connector import HTTPConnector
-    STRACKS_CONNECTOR = HTTPConnector(STRACKS_URL)
-    MIDDLEWARE_CLASSES += (
-        'stracks_api.middleware.StracksMiddleware',
-    )
